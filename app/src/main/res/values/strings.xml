@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppointmentScheduler</string>
+    <string name="app_details">Find the perfect slot for you, with easy scheduling and managing appointments.
+                                Enjoy a seamless booking experience and take control of your calendar.</string>
+    <string name="app_contact">Get in touch with us!
+                                Contact info: nikolovskasimona6@gmail.com</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+</resources>

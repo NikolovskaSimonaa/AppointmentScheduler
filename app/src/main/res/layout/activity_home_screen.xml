@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".HomeScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@id/appBarLayout"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/logo1"
+                android:contentDescription="logoPicture"
+                app:flow_verticalAlign="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#80094477">
+
+            <!-- Your content for the second AppBarLayout -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Welcome"
+                app:titleTextColor="#B3000000"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+            <!-- Add other views or content for the second AppBarLayout if needed -->
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintWidth_percent="0.75"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#66000000"/>
+
+    <TextView
+        android:id="@+id/textViewDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintWidth_percent="0.75"
+        android:text="@string/app_details"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#CC000000"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintWidth_percent="0.75"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textViewDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#66000000"/>
+
+    <TextView
+        android:id="@+id/noteText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:text="Note: Weekly appointments are released every Saturday."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        android:gravity="center"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/buttonMakeAppointment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.75"
+        android:text="+ New appointment"
+        android:backgroundTint="#59094477"
+        android:textColor="#E6FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        android:textSize="20sp"
+        android:onClick="makeAppointmentButtonClicked"/>
+
+    <TextView
+        android:id="@+id/textViewContact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintWidth_percent="0.75"
+        android:text="@string/app_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonMakeAppointment"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#B3000000"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

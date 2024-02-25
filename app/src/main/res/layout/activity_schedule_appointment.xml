@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleAppointmentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/logo1"
+            android:contentDescription="logoPicture"
+            app:flow_verticalAlign="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintWidth_percent="0.75"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#66000000"/>
+
+    <TextView
+        android:id="@+id/weeklyScheduling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:textStyle="italic"
+        android:text="Schedule your next appointment this week"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        android:gravity="center"
+        android:textSize="19sp"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintWidth_percent="0.75"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/weeklyScheduling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#66000000"/>
+
+    <TextView
+        android:id="@+id/noteText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Note: Weekly appointments are released on Saturday."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weeklyScheduling"
+        android:gravity="center"
+        android:textSize="14sp"/>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Header: Time Slots -->
+    <GridLayout
+        android:id="@+id/gridTimeSlots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:rowCount="7"
+        android:layout_margin="32dp"
+        android:divider="@android:color/black"
+        android:showDividers="middle"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="#730A4F8B">
+
+        <!-- days of the week -->
+        <TextView
+            android:text="Time"
+            android:textSize="20sp"
+            android:padding="8dp"/>
+        <TextView
+            android:text="Mon"
+            android:textSize="20sp"
+            android:padding="8dp"/>
+        <TextView
+            android:text="Tue"
+            android:textSize="20sp"
+            android:padding="8dp"/>
+        <TextView
+            android:text="Wed"
+            android:textSize="20sp"
+            android:padding="8dp"/>
+        <TextView
+            android:text="Thu"
+            android:textSize="20sp"
+            android:padding="8dp"/>
+        <TextView
+            android:text="Fri"
+            android:textSize="20sp"
+            android:padding="8dp"/>
+
+        <!-- row 1 (10:00) -->
+        <TextView
+            android:text=""
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/textView10"
+            android:text="10:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView11"
+            android:text="10:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView12"
+            android:text="10:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView13"
+            android:text="10:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView14"
+            android:text="10:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+
+        <!-- row 2 (11:00) -->
+
+        <TextView
+            android:text=""
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/textView20"
+            android:text="11:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView21"
+            android:text="11:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView22"
+            android:text="11:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView23"
+            android:text="11:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView24"
+            android:text="11:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+
+        <!-- row 3 (12:00) -->
+
+        <TextView
+            android:text=""
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/textView30"
+            android:text="12:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView31"
+            android:text="12:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView32"
+            android:text="12:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView33"
+            android:text="12:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView34"
+            android:text="12:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+
+        <!-- row 4 (13:00) -->
+
+        <TextView
+            android:text=""
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/textView40"
+            android:text="13:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView41"
+            android:text="13:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView42"
+            android:text="13:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView43"
+            android:text="13:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView44"
+            android:text="13:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+
+        <!-- row 5 (14:00) -->
+
+        <TextView
+            android:text=""
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/textView50"
+            android:text="14:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView51"
+            android:text="14:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView52"
+            android:text="14:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView53"
+            android:text="14:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+        <TextView
+            android:id="@+id/textView54"
+            android:text="14:00"
+            android:padding="8dp"
+            android:enabled="true"/>
+
+    </GridLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
